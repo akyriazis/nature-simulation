@@ -7,7 +7,7 @@ import com.alexkyriazis.evolution.Evolver;
 
 public class Nature {
 	
-	public static final String STARTING_DNA = "psepseeesppepeppspeppeepsppspspepspeppspeppspepspessssssep";
+	public static final String STARTING_DNA = "psepsesesppesneppspsnpepsnnsnpnspepnspepspeppspenspessssssep";
 	public static final int POP_SIZE = 10;
 	public static final int NUM_GEN = 200;
 
@@ -25,7 +25,7 @@ public class Nature {
 		System.out.println("================");
 		for (Animal animal : generation) {
 			if (animal.isDead()) {
-				System.out.println(animal.getDna() + " - " + "DEAD AT AGE " + animal.getAge());
+				System.out.println(animal.getDna() + " - " + "DEAD AT AGE " + animal.getAge() + " by " + animal.getCauseOfDeath());
 			}else{
 				System.out.println(animal.getDna() + " - " + animal.getFitness());
 			}

@@ -14,6 +14,7 @@ public class Animal extends Evolver {
 	private int age;
 	
 	Boolean dead;
+	String deathType = "Not Dead";
 
 	public Animal(String dna) {
 		super(dna);
@@ -56,7 +57,7 @@ public class Animal extends Evolver {
 				
 				//chance animal will get eaten during sleep
 				if (Math.random() > PROBABILITY_EATEN_DURING_SLEEP){
-					Animal.this.dead = true;
+					Animal.this.die("predation while asleep");
 				}
 				
 				Animal.this.update();
@@ -77,6 +78,14 @@ public class Animal extends Evolver {
 			}
 		});	
 
+		//ANIMAL DOES NOTHING
+		this.defineAction('n', new Action(){
+			public void act() {
+				if (Animal.this.dead) return;
+				Animal.this.update();
+			}
+		});			
+		
 	}
 	
 	private void update() {
@@ -86,15 +95,24 @@ public class Animal extends Evolver {
 		
 		//die if you haven't eaten enough food
 		if (Math.round(this.health / this.age) < 2) {
-			this.dead = true;
+			this.die("starvation");
 		}
 		
 		//random chance you get attacked by a predator. If you're not fit enough, you die.
 		if (Math.round(this.fitness/this.age) < 2) {
 			if (Math.random() > PROBABILITY_EATEN_WHEN_WEAK){
-				this.dead = true;
+				this.die("predation");
 			}
 		}
+	}
+	
+	private void die(String cause){
+		this.dead = true;
+		this.deathType = cause;
+	}
+	
+	public String getCauseOfDeath(){
+		return this.deathType;
 	}
 	
 	public int getAge() {
@@ -111,6 +129,7 @@ public class Animal extends Evolver {
 		age = 1;	
 		fitness = 5;
 		dead = false;
+		deathType = "Not Dead";
 	}
 
 }
