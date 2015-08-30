@@ -46,7 +46,7 @@ nepeespneespnepneneesepseppnpnepsnspnnnsnsnesnssepsneenpnepe - DEAD AT AGE 3 by 
 sesspnnpnnsseenseeensnnsnpeessppeseppsnsnnsnsespseenpppppesn - DEAD AT AGE 3 by predation
 sesspnnpnnspnepneneesepseppnpnepsnspnnnsnsnesnssepsneenpnepe - DEAD AT AGE 3 by predation
 ```
-Initially, no animal makes it past the age of 6. Cause of death is mainly predation, indicating the animals haven't 'played' enough in the beginning to gain fitness.
+Initially, no animal makes it past the age of 6. Cause of death is mainly predation, indicating the animals haven't 'played' enough in the beginning to gain fitness. Also note the animals are doing a lot of "nothing" which is not helping their survival.
 
 ```
 Generation 10
@@ -94,7 +94,7 @@ eppepspnenppeeppppnenpesepppeneppnepppnpsspeeeepeeepssnseeep - 276
 eppepspsenppeepspppeppeseppeeneppnepppnpsspeeeepeeepssnsenep - 270
 eppepspsenppespppppenpeseppeepeppnenppnpsnpeeeepeeepssnseeep - DEAD AT AGE 8 by predation while asleep
 ```
-Most animals are surviving at this point, it's now becoming a matter of who is eating the most food.
+Most animals are surviving at this point, it's now becoming a matter of who is eating the most food. Animals are also clearly avoiding "doing nothing" which would obviously not help them. Only proactive animals survive!
 
 ```
 Generation 200
