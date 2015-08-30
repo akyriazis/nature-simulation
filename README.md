@@ -20,15 +20,18 @@ The behaviour of the model is based on simple rules.
   
   -Doing nothing does nothing.
 
-2. Every iteration, an animal will starve if its health is low, or be eaten if its fitness is low.
+2. At every iteration, an animal could starve if its health is low, or could be eaten if its fitness is low.
 
 3. After 60 iterations, the animal will be awarded a score to determine its likelihood to advance to the next generation. Its score is based on its health, fitness and whether or not the animal survived 60 iterations.
 
 ##Simulation Details
 
 -Each generation will have a population of 10 individuals. 
+
 -An individual's behaviour is determiend by its DNA which is made up of the characters 'e','s','p','n', standing for eat, sleep, play, nothing.
+
 -The DNA of generation 1 is determined randomly. 
+
 -After reaching the age of 60, an animal's simulation stops and the animal is assessed.
 
 ##Simulation Results
@@ -78,7 +81,7 @@ eppepspsenppeepnpnpeppeseppppnepsnspppnpspnesenseennssnpenpp - DEAD AT AGE 53 by
 eppepspsenppeepppnpenpeseppppnepsnspppnpspnesenseennssnpenpp - DEAD AT AGE 48 by predation while asleep
 eppepspsenppeepppnpenpeseppppnepsnnpppnpspnesenseennssnpenpp - DEAD AT AGE 45 by predation while asleep
 ```
-Finally some animals are surviving for the whole simulation. The numbers next to the living animals indicate their score. Also worth noting, more animals are dying while asleep. They've gotten greedy and are abusing sleep for health but now are seeing the consequences of too much sleep.
+Finally some animals are surviving for the whole simulation. The numbers next to the living animals indicate their score. Also worth noting, more animals are dying while asleep. They've become greedy and are abusing sleep for health but now are seeing the consequences of too much sleep.
 
 ```
 Generation 100
@@ -110,8 +113,8 @@ eppepspspsppsspppeeenpeppppeepeppnepppnpepneeenpeeepeeeeeeee - DEAD AT AGE 14 by
 eppepspspsppespppeeenpeppppeepeppnepppnpepneeeepeeepeeeeeeee - DEAD AT AGE 10 by predation while asleep
 eppepspspsppespppeeenpeppppeepeppnepppnpepneeeepeeepeeeeeeee - DEAD AT AGE 10 by predation while asleep
 ```
-This is the extent that I evolved this population to. Their scores are definitely increasing. It is interesting to notice that they are getting greedy toward the end and are eating as much as possible in the last stretch because there is no consequence of lacking fitness after the 60th iteration.
+This is the extent to which I've evolved this population. Their scores are definitely increasing. It is interesting to note that they are getting greedy toward the end and are eating as much as possible in the last stretch because there is no consequence of lacking fitness after the 60th iteration.
 
 ##Conclusion
 
-The algorithm appears to be working and producing interesting results! It's hard to try to conceptually understand what the optimal solution to a problem like this might be, but evolutionary algorithms are certaintly making it clearer. This is a very simple application that took me under an hour to make. I'm interested in seeing the potential in evolutionary algorithms for more realistic models, and more significant problems. 
+The algorithm appears to be working and producing interesting results! It's hard to try to conceptually understand what the optimal solution to a problem like this might be, but evolutionary algorithms are certaintly making it clearer. This is a very simple application that was very easy to implement with my evolutionary algorithm engine. I'm interested in seeing the potential in evolutionary algorithms for more realistic models, and more significant problems. 
